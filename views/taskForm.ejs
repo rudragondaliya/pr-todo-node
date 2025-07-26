@@ -21,7 +21,7 @@
               <select name="employeeId" id="employeeId" class="form-select" required>
                 <option disabled selected>Select Employee</option>
                 <% employee.forEach(emp => { %>
-                  <option value="<%= emp.username %>" <%= task && task.employeeId === emp.id ? 'selected' : '' %>>
+                  <option value="<%= emp.id %>" <%= task && task.employeeId === emp.id ? 'selected' : '' %>>
                     <%= emp.username %> (#<%= emp.id %>)
                   </option>
                 <% }) %>

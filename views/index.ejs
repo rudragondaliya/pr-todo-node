@@ -115,7 +115,10 @@
               <ul class="list-unstyled small mb-4">
                 <li class="mb-2"><i class="bi bi-person-fill me-2 text-primary"></i>
                   <strong>Employee:</strong> 
-                  <%= (employee.find(e => e.id === task.employeeId) || {}).username || 'Unknown' %>
+                  <!-- <%= (employee.find(e => e.id === task.employeeId) || {}).name || 'Unknown' %> -->
+                   <% const emp = employee.find(e => e.id == task.employeeId); %>
+                  <%= emp ? emp.username : 'No Employee Found' %>
+
                 </li>
                 <li class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i>
                   <strong>Due Date:</strong> <%= task.dueDate || 'No due date' %>
