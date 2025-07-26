@@ -22,12 +22,7 @@
             </div>
             <div class="col-md-6">
               <label for="department" class="form-label">Department</label>
-              <!-- <select name="department" value="<%= emp ? emp.department : '' %>" class="form-select" id="department" required>
-                <option disabled selected>Select Department</option>
-                <option value="HR">HR</option>
-                <option value="IT">IT</option>
-                <option value="Finance">Finance</option>
-              </select> -->
+    
               <select name="department" class="form-select" id="department" required>
               <option disabled <%= !emp ? 'selected' : '' %>>Select Department</option>
               <option value="HR" <%= emp && emp.department === 'HR' ? 'selected' : '' %>>HR</option>
@@ -56,12 +51,13 @@
             </div>
             <div class="col-md-6">
               <label for="status" class="form-label">Status</label>
-              <select name="status" class="form-select" required>
+            
+                <select name="status" class="form-select" required>
                 <option disabled <%= !emp ? 'selected' : '' %>>Select Status</option>
                 <option value="Active" <%= emp && emp.status === 'Active' ? 'selected' : '' %>>Active</option>
                 <option value="Inactive" <%= emp && emp.status === 'Inactive' ? 'selected' : '' %>>Inactive</option>
-                </select>
-
+               
+              </select>
             </div> 
           </div>
 
