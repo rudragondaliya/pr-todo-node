@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Table View</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .avatar-circle {
+      width: 40px;
+      height: 40px;
+      background-color: #e0e7ff;
+      color: #6366f1;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+ <%- include('navbar') %>
+
+  <!-- Page Title -->
+  <div class="container mt-5">
+    <h3 class="mb-4 fw-bold">Employee Table View</h3>
+
+    <input
+          type="search"
+          placeholder="Search the employee..."
+          class="w-100 form-control mb-5"
+        />
+
+    <!-- Employee Table -->
+    <div class="table-responsive">
+      <table class="table table-borderless align-middle bg-white rounded shadow-sm">
+        <thead class="table-light">
+          <tr>
+            <th>NAME</th>
+            <th>DEPARTMENT</th>
+            <th>STATUS</th>
+            <th>SALARY</th>
+            <th>JOIN DATE</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% employee.map(emp => { %>
+            <tr>
+              <td class="d-flex align-items-center gap-3">
+                <div class="avatar-circle"><%= emp.username[0] %></div>
+                <div>
+                  <div class="fw-bold"><%= emp.username %></div>
+                  <div class="text-muted small"><%= emp.email %></div>
+                </div>
+              </td>
+              <td><span class="badge bg-primary-subtle text-primary"><%= emp.department %></span></td>
+              <td>
+                <% if (emp.status === 'Active') { %>
+                  <span class="badge bg-success-subtle text-success">Active</span>
+                <% } else { %>
+                  <span class="badge bg-secondary-subtle text-secondary">Inactive</span>
+                <% } %>
+              </td>
+              <td><%= emp.salary %></td>
+              <td><%= emp.joinDate %></td>
+              <td>
+                <a href="/delete/<%= emp.id %>" class="text-decoration-none text-danger mx-2">Delete</a>
+                <a href="/edit/<%= emp.id %>" class="text-decoration-none text-warning">Edit</a>
+
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const inputSearch = document.querySelector('input[type="search"]');
+      const rows = document.querySelectorAll('tbody tr');
+
+      inputSearch.addEventListener('input', ()=>{
+        const val = inputSearch.value.toLowerCase()
+
+        rows.forEach(row => {
+          const text = row.innerText.toLowerCase()
+          row.style.display = text.includes(val) ? "" : "none";
+        });
+      })
+  </script>
+</body>
+</html>

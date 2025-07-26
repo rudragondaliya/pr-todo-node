@@ -1,0 +1,218 @@
+
+.box-1{
+    height: 150px;
+    width: 350px;
+    border-radius: 20px;
+    border-left: 5px solid rgb(14, 109, 243);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box-2{
+    height: 150px;
+    width: 350px;
+    border-radius: 20px;
+    border-left: 5px solid rgb(9, 228, 9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.box-3{
+    height: 150px;
+    width: 350px;
+    border-radius: 20px;
+    border-left: 5px solid rgb(236, 5, 5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.box-4{
+    height: 150px;
+    width: 350px;
+    border-radius: 20px;
+    border-left: 5px solid rgb(82, 141, 222);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.box-icon-1{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(168, 197, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-icon-2{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(132, 226, 152);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-icon-3{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(230, 121, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-icon-4{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(101, 127, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-body {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  min-height: 280px;
+}
+
+.card-body:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Employee Name */
+.employee-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 8px;
+}
+
+/* Position/Role */
+.employee-position {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+/* Info Section */
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Each info item */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #f1f3f5;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.info-item:hover {
+  background: #e9ecef;
+}
+
+/* Icons */
+.info-icon i {
+  font-size: 1.2rem;
+  color: #4a69bd;
+}
+
+/* Text */
+.info-text {
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+.highlight {
+  color: #212529;
+  font-weight: 600;
+}
+
+
+
+/* Fonts */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  color: #333;
+}
+
+/* Banner */
+.welcome-box {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 20px;
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-box h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.welcome-box h5 {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.box-btn .btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.box-btn .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.employee-box{
+  height: 400px;
+  width:  430px;
+  /* border: 2px solid black; */
+  /* border-radius: 20px; */
+}
+
+
+.task-form{
+  height: 400px;
+  width: 870px;
+  /* border: 2px solid black; */
+  /* border-radius: 20px; */
+}
+
+.list-box{
+  height: 80px;
+  width: 300px;
+  border: 2px solid;
+  border-radius: 20px;
+}
